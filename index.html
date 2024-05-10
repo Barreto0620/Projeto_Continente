@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webleb</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="slider" x-data="{start: true, end: false}" style="padding-top: 100px;">
+    <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+      <div class="slider__item">
+        <img class="slider__image" src="https://brasiltravelnews.com.br/wp-content/uploads/2021/09/yellowstone-parc-national.jpg" alt="Parque Nacional de Yellowstone">
+        <div class="slider__info">
+        <div class="card">
+          <h2>Estados Unidos</h2>
+          <p>Ponto Turistico:</p>
+          <p>Temporada:</p>
+          <p>Moeda:</p>
+          <p>Disponibilidade:</p>
+          <p>Valor:</p>
+        </div>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://static.toiimg.com/photo/55704503.cms" alt="Image">
+        <div class="slider__info">
+          <h2>Canada</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://media.istockphoto.com/id/481272289/pt/foto/templo-de-el-castillo-de-chichen-itz%C3%A1-ao-p%C3%B4r-do-sol-m%C3%A9xico.jpg?s=612x612&w=0&k=20&c=zLQeOdC8GyqFBkl9vJ1X4EJbpwBtBxhDGgAveH-gicg=" alt="Image">
+        <div class="slider__info">
+          <h2>Mexico</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://toptransferbrasil.com.br/wp-content/uploads/2019/10/cristo-redentor-3.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Brasil</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://www.palaboratorio.com.br/doutor/uploads/2/blog/2018/01/blog-glaciar-perito-moreno-7c35badd25.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Argentina</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2021/08/49598_FB709B6C2250A9FB-1.jpg?w=1220&h=674&crop=1" alt="Image">
+        <div class="slider__info">
+          <h2>Peru</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://www.desertodoatacama.com/wp-content/uploads/2021/08/deserto-do-atacama-chile.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Chile</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://www.visitcostarica.com/sites/default/files/BANNER-MANUEL-ANTONIO.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Costa Rica</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/25/5f/f7/ciudad-perdida.jpg?w=1200&h=1200&s=1" alt="Image">
+        <div class="slider__info">
+          <h2>Colombia</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoOW1xXDpD32bULapCIYE06rdEaGRfTJp_XdAtyERSLA&s" alt="Image">
+        <div class="slider__info">
+          <h2>Cuba</h2>
+        </div>
+      </div>
+    </div>
+    <div class="slider__nav" style="display: flex;justify-content: center;">
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Anterior</button>
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Proximo</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
+</body>
+</html>
+
