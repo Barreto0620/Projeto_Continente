@@ -14,8 +14,29 @@ html, body {
   height: 100vh;
 }
 
+@keyframes changeColor {
+  0% {
+    background-color: #212172; /* Cor inicial */
+  }
+  50% {
+    background-color: #027702; /* Segunda cor */
+  }
+  100% {
+    background-color: #212172; /* Voltando para a cor inicial */
+  }
+}
+
 body {
-  background: #203239;
+  
+  animation: changeColor 15s infinite; /* Altere a duração conforme desejado */
+}
+
+.logo {
+  display: flex;
+	margin-left: 3%;
+  width: 6%;
+  height: 6%;
+  position: relative;
 }
 
 .title {
@@ -30,7 +51,6 @@ body {
 }
 
 .slider {
-  padding-top: 6%;
   width: 80%;
   max-width: 1500px;
   margin: 0 auto;
@@ -155,7 +175,7 @@ body {
 
 .slider__nav__button:hover {
   color: #fff;
-  background-color: #39535e;
+  background-color: #17262d;
 }
 
 /* Adicionando estilos para as classes slider__nav__button next e prev */
