@@ -106,7 +106,6 @@ body {
 
 .slider__info h2 {
   color: #fff;
-  font-family: system-ui;
   line-height: 1.1;
   font-weight: 300;
   font-size: 1.75rem;
@@ -173,7 +172,6 @@ body {
   width: 100%;
   border-radius: 0.5rem;
   background: rgba(0, 0, 0, 0.6);
-  padding: 1.5rem;
   transition: background 0.3s ease;
 }
 
@@ -183,6 +181,7 @@ body {
 
 .card h2,
 .card p {
-  color: #fff;
+  font-weight: 300;
+  color: aliceblue;
   margin: 0.5rem 0;
 }
