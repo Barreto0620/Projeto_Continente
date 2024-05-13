@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continente Americano</title>
+  <link rel="stylesheet" href="css/america.css">
+</head>
+<body>
+  <div id="america-list" class="slider">
+    <div class="slider__content"></div>
+    <div class="slider__nav">
+		<button class="slider__nav__button prev" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Anterior</button>
+		<button class="slider__nav__button next" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Proximo</button>
+    </div>
+  </div>
+  <script src="america.js"></script>
+</body>
+
+</html>
